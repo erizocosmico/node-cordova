@@ -2,9 +2,6 @@ var shell = require('shelljs'),
 	fs = require('fs'),
 	path = require('path');
 
-// TODO: If cordova in node modules does not exist throw error
-//
-
 var CORDOVA_PATH = path.join(
 	__dirname,
 	'node_modules',
