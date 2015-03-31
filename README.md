@@ -14,9 +14,13 @@ var Cordova = require('node-cordova');
 var app = new Cordova('/path/to/my/app');
 
 app.create('com.fancy.apps', 'App Name');
+
+app.addPlatform('android', function(err, stdout, stderr){
+    // ...
+});
 ```
 
-## Methods of Cordova class
+## Methods of Cordova class
 
 *Note:* all methods can take a callback parameter. It that parameter is provided the method will run asynchronously, otherwise it will run synchronously. Callback must be a function which accepts a single parameter that will be either an error string (the output of the cordova command) or undefined if everything went ok.
 
@@ -58,7 +62,7 @@ app.create('com.fancy.apps', 'App Name');
  * @return {String|undefined}
  ```
 
-### removePlugin
+### removePlugin
 ```
  * Removes a plugin from the app
  * @method removePlugin
